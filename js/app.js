@@ -18,6 +18,9 @@ let seattle = {
     for (let i = 0; i < hours.length; i++) {
       let cookiesThisHr = Math.ceil(this.randomCust() * this.avgSale);
       this.hourlyCookies.push(cookiesThisHr);
+      console.log(cookiesThisHr);
+      // be = be + 5;
+      this.dailyTotal = this.dailyTotal + cookiesThisHr;
     }
   }
   
@@ -28,7 +31,7 @@ console.log(seattle);
 
 for (let i = 0; i < hours.length; i++) {
   let li = document.createElement('li');
-  li.textContent = seattle.hourlyCookies[i];
+  li.textContent = hours[i] + ' - ' + seattle.hourlyCookies[i] + ' cookies';
   seattleList.appendChild(li);
 }
 
