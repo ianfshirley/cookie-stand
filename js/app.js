@@ -32,14 +32,16 @@ console.log(seattle);
 
 for (let i = 0; i < hours.length; i++) {
   let li = document.createElement('li');
-  li.textContent = hours[i] + ': ' + seattle.hourlyCookies[i] + ' cookies';
+  // li.textContent = hours[i] + ': ' + seattle.hourlyCookies[i] + ' cookies';
+  li.textContent = `${hours[i]}: ${seattle.hourlyCookies[i]} cookies`;
   seattleList.appendChild(li);
 }
 
 let liSeattle = document.createElement('li');
-liSeattle.textContent = 'Total: ' + seattle.dailyTotal + ' cookies';
+//liSeattle.textContent = 'Total: ' + seattle.dailyTotal + ' cookies';
+liSeattle.textContent = `Total: ${seattle.dailyTotal} cookies`;
 seattleList.appendChild(liSeattle);
-console.log('Total: ' + seattle.dailyTotal + ' cookies');
+//console.log('Total: ' + seattle.dailyTotal + ' cookies');
 
 
 // TOKYO
@@ -70,12 +72,14 @@ console.log(tokyo);
 
 for (let i = 0; i < hours.length; i++) {
   let li = document.createElement('li');
-  li.textContent = hours[i] + ': ' + tokyo.hourlyCookies[i] + ' cookies';
+  // li.textContent = hours[i] + ': ' + tokyo.hourlyCookies[i] + ' cookies';
+  li.textContent = `${hours[i]}: ${tokyo.hourlyCookies[i]} cookies`;
   tokyoList.appendChild(li);
 }
 
 let liTokyo = document.createElement('li');
-liTokyo.textContent = 'Total: ' + tokyo.dailyTotal + ' cookies';
+//liTokyo.textContent = 'Total: ' + tokyo.dailyTotal + ' cookies';
+liTokyo.textContent = `Total: ${tokyo.dailyTotal} cookies`;
 tokyoList.appendChild(liTokyo);
 
 // DUBAI 
@@ -106,12 +110,14 @@ console.log(dubai);
 
 for (let i = 0; i < hours.length; i++) {
   let li = document.createElement('li');
-  li.textContent = hours[i] + ': ' + dubai.hourlyCookies[i] + ' cookies';
+  //li.textContent = hours[i] + ': ' + dubai.hourlyCookies[i] + ' cookies';
+  li.textContent = `${hours[i]}: ${dubai.hourlyCookies[i]} cookies`;
   dubaiList.appendChild(li);
 }
 
 let liDubai = document.createElement('li');
-liDubai.textContent = 'Total: ' + dubai.dailyTotal + ' cookies';
+// liDubai.textContent = 'Total: ' + dubai.dailyTotal + ' cookies';
+liDubai.textContent = `Total: ${dubai.dailyTotal} cookies`;
 dubaiList.appendChild(liDubai);
 
 // PARIS
@@ -142,12 +148,14 @@ console.log(paris);
 
 for (let i = 0; i < hours.length; i++) {
   let li = document.createElement('li');
-  li.textContent = hours[i] + ': ' + paris.hourlyCookies[i] + ' cookies';
+  // li.textContent = hours[i] + ': ' + paris.hourlyCookies[i] + ' cookies';
+  li.textContent = `${hours[i]}: ${paris.hourlyCookies[i]} cookies`;
   parisList.appendChild(li);
 }
 
 let liParis = document.createElement('li');
-liParis.textContent = 'Total: ' + paris.dailyTotal + ' cookies';
+// liParis.textContent = 'Total: ' + paris.dailyTotal + ' cookies';
+liParis.textContent = `Total: ${paris.dailyTotal} cookies`;
 parisList.appendChild(liParis);
 
 // LIMA
@@ -178,10 +186,12 @@ console.log(lima);
 
 for (let i = 0; i < hours.length; i++) {
   let li = document.createElement('li');
-  li.textContent = hours[i] + ': ' + lima.hourlyCookies[i] + ' cookies';
+  // li.textContent = hours[i] + ': ' + lima.hourlyCookies[i] + ' cookies';
+  li.textContent = `${hours[i]}: ${lima.hourlyCookies[i]} cookies`;
   limaList.appendChild(li);
 }
 
 let liLima = document.createElement('li');
-liLima.textContent = 'Total: ' + lima.dailyTotal + ' cookies';
+// liLima.textContent = 'Total: ' + lima.dailyTotal + ' cookies';
+liLima.textContent = `Total: ${lima.dailyTotal} cookies`;
 limaList.appendChild(liLima);
