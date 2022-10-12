@@ -11,3 +11,7 @@ ul {
 h3 {
   margin: 1em;
 }
+
+table, td, th {
+  border: 1px solid salmon;
+}
