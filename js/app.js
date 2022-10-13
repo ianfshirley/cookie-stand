@@ -62,7 +62,7 @@ function makeHeader(hours) {
       hourCell.textContent = hours[i];
       headerRow.appendChild(hourCell);
   }
-  let dailyTotalCell = document.createElement('td');
+  let dailyTotalCell = document.createElement('th');
   dailyTotalCell.textContent = 'Daily Location Total';
   headerRow.appendChild(dailyTotalCell);
 };

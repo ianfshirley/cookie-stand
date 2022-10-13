@@ -1,5 +1,6 @@
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #fbe2e2;
 }
 
 header {
@@ -9,6 +10,7 @@ header {
   height: 100px;
   align-items: flex-end;
   justify-content: center;
+  border: 5px ridge #111f36;
 }
 
 nav {
@@ -17,37 +19,135 @@ nav {
   /* height: 100%; */
   /* align-items: center; */
   justify-content: space-between;
+  margin: 0px 10px 0 10px;
+}
+
+img {
+  border: 2px solid #701a1a;
 }
 
 nav img {
   height: 50px;
-  padding: 1em;
-
+  margin-top: 10px;
 }
 
-ul {
+nav ul {
   display: flex;
   justify-content: flex-end;
 }
 
-li {
-  
-  padding: 5px;
+.nav-links {
+  font-size: 1em;
+  padding-right: 10px;
+  text-decoration: none;
+  color:#111f36;
 }
 
 h1 {
   padding-top: 1em;
-  font-size: 45px;
+  font-size: 3em;
   font-family: 'Alkalami', serif;
   color: #111f36;
   text-shadow: 1px 1px #ff2929;
 }
 
-h3 {
-  margin: 1em;
-  font-family: 'Alkalami', serif;
+#chinook-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
 }
 
-table, td, th {
+#chinook-img {
+  height: 100px;
+  margin: auto;
+  padding: 10px;
+  border: none;
+}
+
+#location {
+  text-align: center;
+  margin: 1em;
+  border: 10px ridge #111f36;
+  background-color: bisque;
+  padding-bottom: 5px;
+}
+
+h2 {
+  font-size: 1.5em;
+  padding: 5px;
+  text-decoration: underline;
+}
+
+#hours {
+  padding: 5px;
+}
+
+section ul {
+  list-style-type: disc;
+  margin: auto;
+  width: 80%;
+  padding-top: 10px;
+}
+
+.location-name {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.address {
+  font-size: 0.75em;
+  padding: 5px;
+}
+
+#image-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em 5em 1em 5em;
+}
+
+.image-row {
+  height: 5em;
+}
+
+#contact-section {
+  text-align: center;
+}
+
+.contact-info {
+  padding: 5px;
+}
+
+#family {
+  height: 8em;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* SALES PAGE */
+table {
+  border: 3px ridge salmon;
+  background-color: #111f36;
+  color: antiquewhite;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th {
   border: 1px solid salmon;
+  padding: 5px;
+  font-size: 0.8em;
+  text-align: center;
+  justify-content: center;
+}
+
+td {
+  border: 1px solid salmon;
+  padding: 5px;
+  font-size: 0.7em;
+  text-align: center;
+  justify-content: center;
 }
