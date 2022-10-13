@@ -1,4 +1,4 @@
-# LAB - Number 06
+# LAB - Number 06, 07, 08
 
 ## Cookie Shop
 
