@@ -1,3 +1,7 @@
+body {
+
+}
+
 ul {
   display: block;
   list-style-type: disc; 
@@ -10,6 +14,7 @@ ul {
 
 h3 {
   margin: 1em;
+  font-family: 'Alkalami', serif;
 }
 
 table, td, th {
