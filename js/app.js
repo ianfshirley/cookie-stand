@@ -138,6 +138,20 @@ console.log(lima.dailyTotal);
 
 renderRows();
 
+let form = document.querySelector('form');
 
+function handleSubmit(event) {
+  event.preventDefault();
+  console.log(event);
+  let location = event.target.location.value;
+  console.log(`this is ${event.target.location.value}`);
+  let minCust = event.target.minCust.value;
+  console.log(`this is min: ${event.target.minCust.value}`);
+  let maxCust = event.target.maxCust.value;
+  console.log(`this is max: ${event.target.maxCust.value}`);
+  let avgSale = event.target.avgSale.value;
+  console.log(`this is average: ${event.target.avgSale.value}`);
 
+  let newLocation = new CookieStand(location, minCust, maxCust, avgSale);
+}
 
