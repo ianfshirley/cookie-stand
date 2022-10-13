@@ -21,6 +21,7 @@ function CookieStand(locationName, minCust, maxCust, avgSale) {
         return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
       };
   allCookieStores.push(this);
+  
 }
 
 
@@ -87,9 +88,17 @@ footerRow.appendChild(footerName);
     hourlyTotalCell.textContent = totalPerHour;
     footerRow.appendChild(hourlyTotalCell);
   }
+  let allCitiesTotalCell = document.createElement('th');
+  let allCitiesTotal = 0;
+    for (let k = 0; k < hours.length; k++) {
+      allCitiesTotal += totalPerHour[k];
+    }
+  allCitiesTotalCell.textContent = allCitiesTotal;
+  footerRow.appendChild(allCitiesTotalCell);
 };
 
 let allCookieStores = []
+let totalPerHour = []
 //[{name: seattle, minCus: 23, maxCus: 65, AvgSale: 6.3},
 //{name: seattle, minCus: 23, maxCus: 65, AvgSale: 6.3}]
 let seattle = new CookieStand ('Seattle', 23, 65, 6.3);
