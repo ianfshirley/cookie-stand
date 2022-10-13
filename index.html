@@ -16,25 +16,42 @@
       <img src="img/frosted-cookie.jpeg" alt="Frosted Cookie">
       <h1>Salmon Cookies</h1>
       <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./sales.html">Sales Data</a></li>
-        <!-- <li><a href="./contact-us.html">Contact Us</a></li> -->
+        <li class="nav-links"><a href="./index.html">Home</a></li>
+        <li class="nav-links"><a href="./sales.html">Sales Data</a></li>
+        <!-- <li class="nav-links"><a href="./contact-us.html">Contact Us</a></li> -->
       </ul>
     </nav>
   </header>
 
   <!--REQUIREMENTS FOR THIS PAGE 
-      -image of salmon
-      -A custom sans-serif Google Font for use in heading tags (<h# />)
-      A specified standard sans-serif web font for sales data (such as Arial, Verdana, or Helvetica).
-      -Specified different font colors for all three font uses.
+      -Specified different font colors for all three font uses (headers, sales data, home page body).
       -A background color for the default page background (make sure font colors have good contrast and are readable on this background).
       -A different background color for elements such boxes and tables (so make sure the font colors contrast against this well, too!).
-      -Anything else you’d like to add related to style. But remember: simplicity, clarity, and consistency are good things in design.
-      -Be thoughtful about layout and overall organization of the page.
-      -Include all of the typical stuff that you’ll find on the home page of a business: locations, hours, contact information, some text about how awesome the business is, etc. Be creative, and again, think about what is meaningful to a typical end user.
   -->
-   
+  
+  <div id="chinook-div">
+    <img id="chinook-img" src="img/salmon.png" alt="Chinook">
+  </div>
+
+  <section id="location">
+    <h2>Hours & Locations</h2>
+    <p id="hours">Hours for all locations: 6am to 8pm, Tuesday to Saturday
+      (according to local time zone)</p>
+    <ul>
+      <li class="address"><span class="location-name">Seattle</span> - 701 5th Ave, Seattle, WA, USA 98104 (Located inside Columbia Tower)</li>
+      <li class="address"><span class="location-name">Tokyo</span> - 1 Chome-1-2 Oshiage, Sumida City, Tokyo, 131-0045, Japan (Located inside Tokyo Skytree)</li>
+      <li class="address"><span class="location-name">Dubai</span> - 1 Sheikh Mohammed bin Rashid Blvd - Dubai, UAE (Located inside the Burj Khalifa)</li>
+      <li class="address"><span class="location-name">Paris</span> - Champ de Mars, 5 av. Anatole France, 75007 Paris, France (Located inside the Eiffel Tower)</li>
+      <li class="address"><span class="location-name">Lima</span> - Av. Javier Prado Este, San Borja 15037, Lima, Peru (Located inside Banco de la Nacion Tower)</li>
+    </ul>
+  </section>
+
+  <section id="image-section">
+    <img class="image-row" src="img/fish.jpeg" alt="fishies">
+    <img class="image-row" src="img/cutter.jpeg" alt="Salmon cookie cutter">
+    <img class="image-row" src="img/shirt.jpeg" alt="salmon shirt">
+  </section>
+
 
   <script src="js/app.js"></script>
 </body>
