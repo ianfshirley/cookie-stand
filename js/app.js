@@ -73,6 +73,7 @@ function makeFooter() {
 // loop through each hour,
 //within that hour, loop through all the stores to get hourlyCookies
 // calculate hourly sale and store it to totalPerHour for all stores and create a cell for it
+let totalPerHourArray = []
 let footerRow = document.createElement('tr');
 let footerName = document.createElement('th');
 footerName.textContent = 'Totals';
@@ -86,19 +87,20 @@ footerRow.appendChild(footerName);
         //let totalPerHour += allCookieStores[j].hourlyCookies[i]
       }
     hourlyTotalCell.textContent = totalPerHour;
+    totalPerHourArray.push(totalPerHour);
     footerRow.appendChild(hourlyTotalCell);
   }
   let allCitiesTotalCell = document.createElement('th');
   let allCitiesTotal = 0;
-    for (let k = 0; k < hours.length; k++) {
-      allCitiesTotal += totalPerHour[k];
+    for (let i = 0; i < totalPerHourArray.length; i++) {
+      allCitiesTotal += totalPerHourArray[i];
     }
   allCitiesTotalCell.textContent = allCitiesTotal;
   footerRow.appendChild(allCitiesTotalCell);
 };
 
 let allCookieStores = []
-let totalPerHour = []
+
 //[{name: seattle, minCus: 23, maxCus: 65, AvgSale: 6.3},
 //{name: seattle, minCus: 23, maxCus: 65, AvgSale: 6.3}]
 let seattle = new CookieStand ('Seattle', 23, 65, 6.3);
