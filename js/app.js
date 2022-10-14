@@ -52,6 +52,8 @@ CookieStand.prototype.makeRow = function() {
   table.appendChild(makeRow);
 };
 
+
+
 function makeHeader(hours) {
   // create table header row
   let headerRow = document.createElement('tr');
@@ -138,6 +140,43 @@ console.log(lima.dailyTotal);
 
 renderRows();
 
+// FORM
+
+// window into the DOM
+let form = document.querySelector('form');
+console.log('form');
+
+// declare event handler (function)
+let handleSubmit = function(event) {
+  event.preventDefault();
+  console.log('the form submitted');
+  let newStoreLocation = event.target.newStoreLocation.value;
+  console.log(event.target.newStoreLocation.value);
+  let newStoreMinCust = parseInt(parseInt(event.target.newStoreMinCust.value));
+  console.log(parseInt(event.target.newStoreMinCust.value));
+  let newStoreMaxCust = parseInt(event.target.newStoreMaxCust.value);
+  console.log(parseInt(event.target.newStoreMaxCust.value));
+  let newStoreAvgSale = parseInt(event.target.newStoreAvgSale.value);
+  console.log(parseInt(event.target.newStoreAvgSale.value));
+
+  // function to create a new store
+  console.log('table row count', document.querySelectorAll('#salesTable tr').length)
+  console.log('store count', allCookieStores.length)
+  document.querySelector('table').deleteRow((allCookieStores.length)+1);
+
+  let newStore = new CookieStand(newStoreLocation, newStoreMinCust, newStoreMaxCust, newStoreAvgSale); 
+  console.log(newStore);
+  newStore.generateCookieSale();
+
+  newStore.makeRow();
+  // allCookieStores.push(newStore);
+  makeFooter();
+
+}
+  
+
+// add event listener - what type of event? -> submit
+form.addEventListener('submit', handleSubmit)
 
 
 
