@@ -163,13 +163,13 @@ let handleSubmit = function(event) {
   console.log('table row count', document.querySelectorAll('#salesTable tr').length)
   console.log('store count', allCookieStores.length)
   document.querySelector('table').deleteRow((allCookieStores.length)+1);
-  
+
   let newStore = new CookieStand(newStoreLocation, newStoreMinCust, newStoreMaxCust, newStoreAvgSale); 
   console.log(newStore);
   newStore.generateCookieSale();
 
   newStore.makeRow();
-  allCookieStores.push(newStore);
+  // allCookieStores.push(newStore);
   makeFooter();
 
 }
