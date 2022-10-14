@@ -31,27 +31,31 @@
   <form id="addStore">
     <fieldset>
 
-      <!-- <label for="newLocationName">New Location</label>
-      <input id="newLocationName" type="text" placeholder="New Location" name="storeLocation" required> -->
+      <!-- This is a different way to enter the label & input.
+      
+        <label for="newLocationName">New Location</label>
+      <input id="newLocationName" type="text" placeholder="New Location" name="storeLocation" required> 
+    -->
 
       <label>New Location
         <input type="text" name="newStoreLocation"> 
       </label>
 
       <label>Min. Daily Customers
-        <input type="text" name="newStoreMinCust"> 
+        <input type="number" name="newStoreMinCust"> 
       </label>
 
       <label>Max. Daily Customers
-        <input type="text" name="newStoreMaxCust"> 
+        <input type="number" name="newStoreMaxCust"> 
       </label>
 
       <label>Avg. Cookies Per Customer
-        <input type="text" name="newStoreAvgSale"> 
+        <input type="number" name="newStoreAvgSale"> 
       </label>
 
 
     </fieldset>
+    <button type="submit">Submit</button>
   </form>
 
   <script src="js/app.js"></script>

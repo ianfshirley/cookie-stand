@@ -138,20 +138,48 @@ console.log(lima.dailyTotal);
 
 renderRows();
 
+// FORM
+
+// window into the DOM
 let form = document.querySelector('form');
+console.log('form');
 
-function handleSubmit(event) {
+// declare event handler (function)
+let handleSubmit = function(event) {
   event.preventDefault();
-  console.log(event);
-  let location = event.target.location.value;
-  console.log(`this is ${event.target.location.value}`);
-  let minCust = event.target.minCust.value;
-  console.log(`this is min: ${event.target.minCust.value}`);
-  let maxCust = event.target.maxCust.value;
-  console.log(`this is max: ${event.target.maxCust.value}`);
-  let avgSale = event.target.avgSale.value;
-  console.log(`this is average: ${event.target.avgSale.value}`);
+  console.log('the form submitted');
+  let newStoreLocation = event.target.newStoreLocation.value;
+  console.log(event.target.newStoreLocation.value);
+  let newStoreMinCust = event.target.newStoreMinCust.value;
+  console.log(event.target.newStoreMinCust.value);
+  let newStoreMaxCust = event.target.newStoreMaxCust.value;
+  console.log(event.target.newStoreMaxCust.value);
+  let newStoreAvgSale = event.target.newStoreAvgSale.value;
+  console.log(event.target.newStoreAvgSale.value);
 
-  let newLocation = new CookieStand(location, minCust, maxCust, avgSale);
+  // function to create a new store
+  let newStore = new CookieStand(newStoreLocation, newStoreMinCust, newStoreMaxCust, newStoreAvgSale); 
+  console.log(newStore);
+
+
 }
 
+
+
+  
+
+// add event listener - what type of event? -> submit
+form.addEventListener('submit', handleSubmit)
+
+
+
+// let location = event.target.location.value;
+//   console.log(`this is ${event.target.location.value}`);
+//   let minCust = event.target.minCust.value;
+//   console.log(`this is min: ${event.target.minCust.value}`);
+//   let maxCust = event.target.maxCust.value;
+//   console.log(`this is max: ${event.target.maxCust.value}`);
+//   let avgSale = event.target.avgSale.value;
+//   console.log(`this is average: ${event.target.avgSale.value}`);
+
+//   let newLocation = new CookieStand(location, minCust, maxCust, avgSale);
