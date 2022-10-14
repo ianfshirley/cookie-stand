@@ -52,6 +52,8 @@ CookieStand.prototype.makeRow = function() {
   table.appendChild(makeRow);
 };
 
+
+
 function makeHeader(hours) {
   // create table header row
   let headerRow = document.createElement('tr');
@@ -150,22 +152,27 @@ let handleSubmit = function(event) {
   console.log('the form submitted');
   let newStoreLocation = event.target.newStoreLocation.value;
   console.log(event.target.newStoreLocation.value);
-  let newStoreMinCust = event.target.newStoreMinCust.value;
-  console.log(event.target.newStoreMinCust.value);
-  let newStoreMaxCust = event.target.newStoreMaxCust.value;
-  console.log(event.target.newStoreMaxCust.value);
-  let newStoreAvgSale = event.target.newStoreAvgSale.value;
-  console.log(event.target.newStoreAvgSale.value);
+  let newStoreMinCust = parseInt(parseInt(event.target.newStoreMinCust.value));
+  console.log(parseInt(event.target.newStoreMinCust.value));
+  let newStoreMaxCust = parseInt(event.target.newStoreMaxCust.value);
+  console.log(parseInt(event.target.newStoreMaxCust.value));
+  let newStoreAvgSale = parseInt(event.target.newStoreAvgSale.value);
+  console.log(parseInt(event.target.newStoreAvgSale.value));
 
   // function to create a new store
+  console.log('table row count', document.querySelectorAll('#salesTable tr').length)
+  console.log('store count', allCookieStores.length)
+  document.querySelector('table').deleteRow((allCookieStores.length)+1);
+  
   let newStore = new CookieStand(newStoreLocation, newStoreMinCust, newStoreMaxCust, newStoreAvgSale); 
   console.log(newStore);
+  newStore.generateCookieSale();
 
+  newStore.makeRow();
+  allCookieStores.push(newStore);
+  makeFooter();
 
 }
-
-
-
   
 
 // add event listener - what type of event? -> submit
@@ -173,13 +180,3 @@ form.addEventListener('submit', handleSubmit)
 
 
 
-// let location = event.target.location.value;
-//   console.log(`this is ${event.target.location.value}`);
-//   let minCust = event.target.minCust.value;
-//   console.log(`this is min: ${event.target.minCust.value}`);
-//   let maxCust = event.target.maxCust.value;
-//   console.log(`this is max: ${event.target.maxCust.value}`);
-//   let avgSale = event.target.avgSale.value;
-//   console.log(`this is average: ${event.target.avgSale.value}`);
-
-//   let newLocation = new CookieStand(location, minCust, maxCust, avgSale);
